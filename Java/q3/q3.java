@@ -4,8 +4,13 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         char[] c = s.toCharArray();
-        int length,max,i,j,k,lastsub,m,alldif; length = max = i = k = lastsub = m = alldif = 0;
-        int start,end; start = 0; end = j = 1;
+        int length,max,i,j,k,lastsub,start,end; 
+        start = 0;
+        max = 0;
+        k = 0;
+        i = start;
+        end = j = 1;
+        lastsub = 0;
         if(s.length() > 1) {
             for (;i<s.length() && j<s.length();j++,end++) {
                 k=0;
